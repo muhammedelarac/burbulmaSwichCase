@@ -8,6 +8,8 @@ public class burcBulmaSiwtckCase {
     public static void main(String[] args) {
 
         int month,day;
+        String burc= "";
+        boolean isEror =false;
 
         Scanner input = new Scanner(System.in);
         System.out.println(" Doğdunuz Ay giriniz");
@@ -22,15 +24,13 @@ public class burcBulmaSiwtckCase {
                     System.out.println("Doğdunuz Gün giriniz ");
                     day = input.nextInt();
                     if(day>=1 && day <=21){
-                        System.out.println(" Koç Burcu : 21 Mart - 20 Nisan");
+                        burc="Koc";;
                     }
                     else if(day>=20 && day <=30){
-                        System.out.println("Balık Burcu : 20 Şubat - 20 Mart ");
-                    } else{System.out.println(" Hatali Giris");
+                       burc="Balik";
+                    } else{isEror=true;
 
                     }
-
-
 
              }
             
@@ -39,22 +39,22 @@ public class burcBulmaSiwtckCase {
              System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=21){
-                System.out.println(" Boğa Burcu : 21 Nisan - 21 Mayıs ");
+                burc=" Koc ";
             }else if(day>=22 && day <=30){
-                System.out.println(" İkizler Burcu : 22 Mayıs - 22 Haziran");
+               burc="Boğa";
             }
-            else{System.out.println(" Hatali Giris");
+            else{isEror=true;
             }
 
              break;
              case 5: System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=21){
-                System.out.println(" Boğa Burcu : 21 Nisan - 21 Mayıs ");
+               burc="Boğa";
             }else if(day>=22 && day <=30){
-                System.out.println(" İkizler Burcu : 22 Mayıs - 22 Haziran");
+                burc=" İkizler ";
             }
-            else{System.out.println(" Hatali Giris");
+            else{isEror=true;
             }
         
              break;
@@ -62,11 +62,10 @@ public class burcBulmaSiwtckCase {
              case 6: System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=22){
-                System.out.println("İkizler Burcu : 22 Mayıs - 22 Haziran");
+                burc="İkizler";
             }else if(day>=23 && day <=30){
-                System.out.println(" Yengeç Burcu : 23 Haziran - 22 Temmuz ");
-            }
-            else{System.out.println(" Hatali Giris");
+                burc="Yengeç";            }
+            else{isEror=true;
             }
 
              break;
@@ -74,11 +73,11 @@ public class burcBulmaSiwtckCase {
              case 7: System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=22){
-                System.out.println(" Yengeç Burcu : 23 Haziran - 22 Temmuz");
-            }else if(day>=23 && day <=30){
-                System.out.println(" Aslan Burcu : 23 Temmuz - 22 Ağustos ");
-            }
-            else{System.out.println(" Hatali Giris");
+                burc="Yengeç";       
+                 }else if(day>=23 && day <=30){
+                    burc="Aslan";       
+                     }
+            else{isEror=true;
             }
 
              break;
@@ -86,42 +85,42 @@ public class burcBulmaSiwtckCase {
              case 8: System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=22){
-                System.out.println("  Aslan Burcu : 23 Temmuz - 22 Ağustos");
+                burc="Aslan"; 
             }else if(day>=23 && day <=30){
-                System.out.println(" Başak Burcu : 23 Ağustos - 22 Eylü ");
-            }
-            else{System.out.println(" Hatali Giris");
+                burc="Basak";        
+                 }
+            else{isEror=true;
             }
              break;
              case 9: System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=22){
-                System.out.println("  Başak Burcu : 23 Ağustos - 22 Eylü");
+                burc="Basak";        
             }else if(day>=23 && day <=30){
-                System.out.println(" Terazi Burcu : 23 Eylül - 22 Ekim ");
+                burc="Terazi";        
             }
-            else{System.out.println(" Hatali Giris");
+            else{isEror=true;
             }
              break;
              case 10:  System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=22){
-                System.out.println("  Terazi Burcu : 23 Eylül - 22 Ekim");
+                burc="Terazi";        
             }else if(day>=23 && day <=30){
-                System.out.println(" Akrep Burcu : 23 Ekim - 21 Kasım ");
+                burc="Akrep";        
             }
-            else{System.out.println(" Hatali Giris");
+            else{isEror=true;
             }
 
              break;
              case 11:   System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=21){
-                System.out.println("  Akrep Burcu : 23 Ekim - 21 Kasım");
+                burc="Akrep";        
             }else if(day>=22 && day <=30){
-                System.out.println(" Yay Burcu : 22 Kasım - 21 Aralık ");
+                burc="Yay";        
             }
-            else{System.out.println(" Hatali Giris");
+            else{isEror=true;
             }
 
              break;
@@ -129,40 +128,53 @@ public class burcBulmaSiwtckCase {
              case 12:   System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=21){
-                System.out.println("  Yay Burcu : 22 Kasım - 21 Aralık");
+                burc="Yay";        
             }else if(day>=22 && day <=30){
-                System.out.println(" Oğlak Burcu : 22 Aralık - 21 Ocak ");
+                burc="Oglak";        
             }
-            else{System.out.println(" Hatali Giris");
+            else{isEror=true;
             }
              
              break;
              case 1:  System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=21){
-                System.out.println("  Oğlak Burcu : 22 Aralık - 21 Ocak");
+                burc="Oglak";             
             }else if(day>=22 && day <=30){
-                System.out.println("Kova Burcu : 22 Ocak - 19 Şubat ");
+                burc="Kova";             
             }
-            else{System.out.println(" Hatali Giris");
+            else{isEror=true;
             }
 
              break;
              case 2:  System.out.println("Doğdunuz Gün giriniz ");
              day = input.nextInt();
              if(day>=1 && day <=19){
-                System.out.println("  Kova Burcu : 22 Ocak - 19 Şubat");
+                burc="Kova";             
             }else if(day>=20 && day <=30){
-                System.out.println("Balık Burcu : 20 Şubat - 20 Mart ");
-            }
-            else{System.out.println(" Hatali Giris");
+                burc="balik";             
+            }else{
+
+            
+            isEror=true;
             }
 
              break;
 
              default:
-             System.out.println(" hatali girs");
-        }
+             isEror = true;
+             
+
+             }
+             if( isEror){
+                System.out.println(" hatali girs"); 
+             }else{
+                System.out.println(" borcunuz :  "  + burc);
+             }
+        
+      
+        
+
        
 
 
@@ -174,4 +186,6 @@ public class burcBulmaSiwtckCase {
 
 
     }
-}
+    
+
+    }
